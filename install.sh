@@ -63,6 +63,7 @@ install(){
     path_component="download/${1}"
   fi
   dl "https://github.com/btwiuse/k0s/releases/${path_component}/${compressed}" | tar -C "${bindir}" -xz k0s
+  chmod +x "${bin}"
   cat <<EOF
         Successfully installed k0s to ${bin}
         Please add the directory to your PATH
