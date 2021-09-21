@@ -6,8 +6,6 @@ $ErrorActionPreference = 'Stop'
 
 $Version = if ($args.Length -gt 0) {
   $args.Get(0)
-} else {
-  "latest"
 }
 
 if ($PSVersionTable.PSEdition -ne 'Core') {
