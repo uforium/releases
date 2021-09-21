@@ -57,7 +57,7 @@ install(){
   bin="${bindir}/k0s"
   # bindir="${HOME}/.local/bin/k0s"
   mkdir -p "${bindir}"
-  compressed="$(echo "$(osarch)"/k0s.tar.gz | tr / -)"
+  compressed="$(echo k0s-"$(osarch)".tar.gz | tr / -)"
   dl "https://github.com/btwiuse/k0s/releases/download/${1:-latest}/${compressed}" | tar -C "${bindir}" -xz k0s
   cat <<EOF
         Successfully installed k0s to ${bin}
