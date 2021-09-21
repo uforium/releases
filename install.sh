@@ -59,7 +59,7 @@ install(){
   mkdir -p "${bindir}"
   compressed="$(echo k0s-"$(osarch)".tar.gz | tr / -)"
   path_component="latest/download"
-  if [[ -n "${1}" ]]; then
+  if [ -n "${1}" ]; then
     path_component="download/${1}"
   fi
   dl "https://github.com/btwiuse/k0s/releases/${path_component}/${compressed}" | tar -C "${bindir}" -xz k0s
