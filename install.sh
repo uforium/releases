@@ -4,7 +4,7 @@ set -e
 
 osarch(){
   uname_s="$(uname -s)"
-  uname_o="$(uname -o)"
+  uname_o="$(uname -o 2>/dev/null || true)"
   uname_m="$(uname -m)"
   case "${uname_s}" in
     Darwin) os="darwin" ;;
